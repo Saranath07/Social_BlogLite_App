@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>My Profile</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/headers/">
+
+    
+
+    
+
+
+
+    <style>
+        body{
+
+background-color: #eee;
+}
+
+.card{
+
+background-color: #fff;
+border: none;
+}
+
+.form-color{
+
+background-color: #fafafa;
+
+}
+
+.form-control{
+
+height: 48px;
+border-radius: 25px;
+}
+
+.form-control:focus {
+color: #495057;
+background-color: #fff;
+border-color: #35b69f;
+outline: 0;
+box-shadow: none;
+text-indent: 10px;
+}
+
+.c-badge{
+background-color: #35b69f;
+color: white;
+height: 20px;
+font-size: 11px;
+width: 92px;
+border-radius: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 2px;
+}
+
+.comment-text{
+font-size: 13px;
+}
+
+.wish{
+
+color:#35b69f;
+}
+
+
+.user-feed{
+
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+        
+        
+   
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Custom styles for this template -->
+    <!-- <link href="headers.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    
+
+
+<main>
+  
+
+
+  <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a>
+          <img src="/static/{{image}}" alt="mdo" width="32" height="32" class="rounded-circle">
+        </a>
+        
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/home_page/{{user_name}}" class="nav-link px-2 link-dark">Home</a></li>
+          <li><a href="/add_post/{{user_name}}" class="nav-link px-2 link-dark">Add Post</a></li>
+          <li><a href="/settings/{{user_name}}" class="nav-link px-2 link-dark">Settings</a></li>
+          <li><a href="/logout" class="nav-link px-2 link-dark">Sign Out</a></li>
+          
+ 
+        </ul>
+
+        <form method = "GET" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search" name = "username">
+        </form>
+
+        
+      </div>
+    </div>
+  </header>
+  <div style="text-align:center;">
+    
+    <a>
+        <h1>My Profile</h1>
+        <img src="/static/{{image}}" alt="mdo" width="100" height="100" class="rounded-circle">
+      </a>
+      <p></p>
+      
+      <div class="container">
+        <table class="table">
+            
+            <tr>
+                <th>
+                Total Posts
+            </th>
+            <th>
+                <a href="/{{user_name}}/followee/{{user_name}}" style="color: black;">Following</a> 
+            </th>
+            <th>
+              <a href="/{{user_name}}/followers/{{user_name}}" style="color: black;">Followers</a> 
+            </th>
+        </tr>
+        
+            <tr>
+                <td>
+                {{total_posts}}
+            </td>
+            <td>
+            
+                {{foll1}}
+            </td>
+            <td>
+                {{foll2}}
+            </td>
+            </tr>
+        
+    </table>    
+      </div>
+      </div>
+      <div class="d-flex justify-content-center"><h1>My Posts</h1></div>
+      
+        
+        
+        <div class="container mt-5">
+          <div class="d-flex justify-content-center row">
+              <div class="col-md-8">
+                  <div class="d-flex flex-column comment-section">
+                      <div class="bg-white p-2">
+                        {% for post in posts |reverse %}
+                        Date:{{post[6]}}   Time: {{post[7]}}
+                        <div class="d-flex flex-row user-info"><img class="rounded-circle" src="/static/{{image}}" width="32" height="32" >
+                          <div class="d-flex flex-column justify-content-start ml-2"><span class="d-block font-weight-bold name"><a href="/my_profile/{{user_name}}">{{user_name}}</a></span><span class="date text-black-50"></span></div>
+                      </div>
+                        <div class="border-top">
+                          <div class="row mt-3 ms-1">
+                              <div class=" col-lg-5 mb-lg-0 mb-2 ms-0 photo">
+                                  <img src="/static/{{post[2]}}"
+                                      alt="" class="w-100 h-100">
+                                    <label for="">{{post[0]}}</label>
+                              </div>
+                              <div class="col-lg-7 col-12 d-flex flex-column px-0">
+                                  <div class="px-lg-2  pb-4 textmuted">
+                                    {{post[1]}}
+                                  </div>
+                                  
+                              </div>
+                          </div>
+                      </div>
+                      <p></p>
+                      <div class="bg-white" class="d-flex justify-content-center row">
+                        <div class="d-flex flex-row fs-12">
+                          
+                            <div class="like p-2 cursor"><i class="fa fa-thumbs-o-up"></i><span class="ml-1"> <a href="/{{user_name}}/like/{{post[3]}}" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true"> Like</a>  {{post[5]}}</span></div>
+                            <div class="like p-2 cursor"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                              <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                            </svg><span class="ml-1"> <a href="/{{user_name}}/edit_post/{{post[3]}}"> Edit Post</a></span></div>
+                            <div class="like p-2 cursor"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                              <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                              <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                            </svg> <a href="/{{user_name}}/delete_post/{{post[3]}}"> Delete</a></div>
+                            <!-- <div class="like p-2 cursor"><i class="fa fa-commenting-o"></i><a href="/comment/{{user_name}}/{{post[3]}}" class="ml-1">Comment {{comment_no}}</a></div> -->
+                            
+                        </div>
+                      <div class="bg-white" class="d-flex justify-content-center row">
+                        <div class="container mt-5">
+                          <div class="d-flex justify-content-center row">
+                              <div class="col-md-8">
+                                  <div class="d-flex flex-column comment-section">
+                                      <form action="/comment/{{user_name}}/{{post[3]}}" method="POST" id="comment-form" >
+                                      <div class="bg-light p-2">
+                                          <div class="d-flex flex-row align-items-start"><textarea class="form-control ml-1 shadow-none textarea" name="comment"></textarea></div>
+                                          <div class="mt-2 text-right"><button class="btn btn-primary btn-sm shadow-none" type="submit">Post comment</button></div>
+                                      </div>
+                                      </form>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  
+                        <h2>Comment Section</h2>
+                        {% for comment in post[4] %}
+                        <div class="container mt-5 mb-5">
+                            
+
+                          
+                          <div class="d-flex flex-column col-md-8">
+                              
+                              <div class="coment-bottom bg-white p-2 px-4">
+                                {% if user_name == comment[1] %}
+                                <div
+                                      class="commented-section mt-2">
+                                      <div class="d-flex flex-row user-info"><img class="rounded-circle" src="/static/{{comment[2]}}" width="32" height="32" >
+                                        <div class="d-flex flex-column justify-content-start ml-2"><span class="d-block font-weight-bold name"><a href="/my_profile/{{comment[1]}}">{{comment[1]}}</a></span><span class="date text-black-50"></span></div></div>
+                                      <div class="d-flex flex-row align-items-center commented-user">
+                                        
+                                        <p>
+                                      <div class="comment-text-sm"><span>{{comment[0]}}</span></div>
+                                    </p>
+                                    <div class="like p-2 cursor"><i class="fa fa-thumbs-o-up"></i><span class="ml-1"><a href="/{{user_name}}/comment_like/{{comment[4]}}/{{comment[1]}}" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">Like</a> {{comment[3]}}</span></div>
+                              </div>
+                          </div>
+                          {% else %}
+                                  <div
+                                      class="commented-section mt-2">
+                                      <div class="d-flex flex-row user-info"><img class="rounded-circle" src="/static/{{comment[2]}}" width="32" height="32" >
+                                        <div class="d-flex flex-column justify-content-start ml-2"><span class="d-block font-weight-bold name"><a href="/{{user_name}}/profile/{{comment[1]}}">{{comment[1]}}</a></span><span class="date text-black-50"></span></div></div>
+                                      <div class="d-flex flex-row align-items-center commented-user">
+                                        
+                                        <p>
+                                      <div class="comment-text-sm"><span>{{comment[0]}}</span></div>
+                                    </p>
+                                    <div class="like p-2 cursor"><i class="fa fa-thumbs-o-up"></i><span class="ml-1"><a href="/{{user_name}}/comment_like/{{comment[4]}}/{{comment[1]}}" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">Like</a> {{comment[3]}}</span></span></div>
+                              </div>
+                          </div>
+                        {% endif %}
+                          
+                  </div>
+                  </div>
+                  </div>
+                        {% endfor %}
+                    </div>
+                      <p></p>
+                          {% endfor %}
+                      </div>
+                     
+    
+                  </div>
+              </div>
+          </div>
+          </div>
+          
+             
+  </div>
+  
+  
+</main>
+
+
+    
+
+      
+  </body>
+</html>

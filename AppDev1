@@ -1,0 +1,1552 @@
+_type: export
+__export_format: 4
+__export_date: 2022-12-26T08:43:23.776Z
+__export_source: insomnia.desktop.app:v2022.7.0
+resources:
+  - _id: req_wrk_688c9aff49ce4e44a885ffc5e5ba6c9656dc08b0
+    parentId: wrk_688c9aff49ce4e44a885ffc5e5ba6c96
+    modified: 1662298278938
+    created: 1662298278938
+    url: "{{ base_url }}/api/students/{{ student_name }}"
+    name: To get the name
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1662298278938
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_688c9aff49ce4e44a885ffc5e5ba6c96
+    parentId: null
+    modified: 1662097547177
+    created: 1662097547177
+    name: New Document
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_wrk_688c9aff49ce4e44a885ffc5e5ba6c968225489a
+    parentId: wrk_688c9aff49ce4e44a885ffc5e5ba6c96
+    modified: 1662298278937
+    created: 1662298278937
+    url: "{{ base_url }}/api/students/{{ student_name }}"
+    name: /api/students/{student_name}
+    description: ""
+    method: PUT
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1662298278937
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_wrk_688c9aff49ce4e44a885ffc5e5ba6c9670a02433
+    parentId: wrk_688c9aff49ce4e44a885ffc5e5ba6c96
+    modified: 1662298278932
+    created: 1662298278932
+    url: "{{ base_url }}/api/students/{{ student_name }}"
+    name: /api/students/{student_name}
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1662298278932
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_wrk_688c9aff49ce4e44a885ffc5e5ba6c9654310e51
+    parentId: wrk_688c9aff49ce4e44a885ffc5e5ba6c96
+    modified: 1662298284257
+    created: 1662298278925
+    url: "{{ base_url }}/api/student"
+    name: /api/student
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "s_name": "Random Name"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_98973294bf224e7893fd646210586103
+    authentication: {}
+    metaSortKey: -1662298278925
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_019dc353d51b47058b12a8e84b8cf662
+    parentId: wrk_688c9aff49ce4e44a885ffc5e5ba6c96
+    modified: 1662298313662
+    created: 1662097547231
+    url: /api/studets/{s_id}
+    name: New Request
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1662097547231
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_933be08f15cb61097e1e1bba00bfe8cc2c526e71
+    parentId: wrk_688c9aff49ce4e44a885ffc5e5ba6c96
+    modified: 1662097547213
+    created: 1662097547213
+    name: Base Environment
+    data:
+      base_url: "{{ scheme }}://{{ host }}{{ base_path }}"
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1662097547213
+    _type: environment
+  - _id: jar_933be08f15cb61097e1e1bba00bfe8cc2c526e71
+    parentId: wrk_688c9aff49ce4e44a885ffc5e5ba6c96
+    modified: 1662097547222
+    created: 1662097547222
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_af121242b92540ce973353397fb98abf
+    parentId: wrk_688c9aff49ce4e44a885ffc5e5ba6c96
+    modified: 1672044144418
+    created: 1662097547201
+    fileName: New Document
+    contents: "openapi: 3.0.0
+
+      info:
+
+      \  title: Social Blog Lite Application
+
+      \  description: >
+
+      \    <div>In this project, I have created a RESTful API, database
+      models using Flask-RESTful  and     flask-SQLAlchemy.
+
+      \   \ 
+
+      \    </div>
+
+
+      \    <h3> User Table Schema </h3>\ 
+
+      \    <table>
+
+      \      <thead>
+
+      \        <th>Column Name</th>
+
+      \        <th>Column Type</th>
+
+      \        <th>Constraints</th>
+
+      \      </thead>
+
+      \      <tbody>
+
+      \      <tr>
+
+      \        <td>user_id</td>
+
+      \        <td>Integer</td>
+
+      \        <td>Primary Key, Auto Increment</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>user_name</td>
+
+      \        <td>String</td>
+
+      \        <td>Not Null</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>password</td>
+
+      \        <td>String</td>
+
+      \        <td>Not Null</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>email</td>
+
+      \        <td>String</td>
+
+      \        <td>Not Null</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>first_name</td>
+
+      \        <td>String</td>
+
+      \        <td>Not Null</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>user_name</td>
+
+      \        <td>String</td>
+
+      \        <td>Not Null</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>last_name</td>
+
+      \        <td>String</td>
+
+      \        <td></td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>profile_pic</td>
+
+      \        <td>String</td>
+
+      \        <td></td>
+
+      \      </tr>     \ 
+
+      \      <tr>
+
+      \        <td>following</td>
+
+      \        <td>Integer</td>
+
+      \        <td></td>
+
+      \      </tr> \ 
+
+      \      <tr>
+
+      \        <td>followers</td>
+
+      \        <td>Integer</td>
+
+      \        <td></td>
+
+      \      </tr>
+
+      \    </tbody>
+
+      \    </table>
+
+
+      \    <h3> Posts Table Schema </h3>\ 
+
+      \    <table>
+
+      \      <thead>
+
+      \        <th>Column Name</th>
+
+      \        <th>Column Type</th>
+
+      \        <th>Constraints</th>
+
+      \      </thead>
+
+      \      <tbody>
+
+      \      <tr>
+
+      \        <td>post_id</td>
+
+      \        <td>Integer</td>
+
+      \        <td>Primary Key, Auto Increment</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>post_name</td>
+
+      \        <td>String</td>
+
+      \        <td>Unique, Not Null</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>post_caption</td>
+
+      \        <td>String</td>
+
+      \        <td></td>
+
+      \      </tr>     \ 
+
+      \      <tr>
+
+      \        <td>post_image</td>
+
+      \        <td>String</td>
+
+      \        <td></td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>date</td>
+
+      \        <td>String</td>
+
+      \        <td></td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>time</td>
+
+      \        <td>String</td>
+
+      \        <td></td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>post_like</td>
+
+      \        <td>Integer</td>
+
+      \        <td></td>
+
+      \      </tr>
+
+      \    </tbody>
+
+      \    </table>
+
+      \   \ 
+
+      \    <h3> Comments Table Schema </h3>\ 
+
+      \    <table>
+
+      \      <thead>
+
+      \        <th>Column Name</th>
+
+      \        <th>Column Type</th>
+
+      \        <th>Constraints</th>
+
+      \      </thead>
+
+      \      <tbody>
+
+      \      <tr>
+
+      \        <td>comment_id</td>
+
+      \        <td>Integer</td>
+
+      \        <td>Primary Key, Auto Increment</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>comment</td>
+
+      \        <td>String</td>
+
+      \        <td>Unique, Not Null</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>comment_like</td>
+
+      \        <td>Integer</td>
+
+      \        <td></td>
+
+      \      </tr>     \ 
+
+      \    </tbody>
+
+      \    </table>
+
+
+
+      \    <h3> PostComment Table Schema </h3>\ 
+
+      \    <table>
+
+      \      <thead>
+
+      \        <th>Column Name</th>
+
+      \        <th>Column Type</th>
+
+      \        <th>Constraints</th>
+
+      \      </thead>
+
+      \      <tbody>
+
+      \      <tr>
+
+      \        <td>post_user_comment_id</td>
+
+      \        <td>Integer</td>
+
+      \        <td>Primary Key, Auto Increment</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>user_id</td>
+
+      \        <td>Integer</td>
+
+      \        <td>Foreign Key (user.user_id), Not Null</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>post_id</td>
+
+      \        <td>Integer</td>
+
+      \        <td>Foreign Key (Posts.post_id), Not Null</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>comment_id</td>
+
+      \        <td>Integer</td>
+
+      \        <td>Foreign Key (Comment.comment_id), Not Null</td>
+
+      \      </tr>
+
+      \       \ 
+
+      \    </tbody>
+
+      \    </table>
+
+      \   \ 
+
+      \    <h3> UserPosts Table Schema </h3>\ 
+
+      \    <table>
+
+      \      <thead>
+
+      \        <th>Column Name</th>
+
+      \        <th>Column Type</th>
+
+      \        <th>Constraints</th>
+
+      \      </thead>
+
+      \      <tbody>
+
+      \      <tr>
+
+      \        <td>user_post_id</td>
+
+      \        <td>Integer</td>
+
+      \        <td>Primary Key, Auto Increment</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>user_id</td>
+
+      \        <td>Integer</td>
+
+      \        <td>Foreign Key (user.user_id), Not Null</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>comment_id</td>
+
+      \        <td>Integer</td>
+
+      \        <td>Foreign Key (Comment.comment_id), Not Null</td>
+
+      \      </tr>     \ 
+
+      \    </tbody>
+
+      \    </table>
+
+      \   \ 
+
+      \    <h3> Follow Table Schema </h3>\ 
+
+      \    <table>
+
+      \      <thead>
+
+      \        <th>Column Name</th>
+
+      \        <th>Column Type</th>
+
+      \        <th>Constraints</th>
+
+      \      </thead>
+
+      \      <tbody>
+
+      \      <tr>
+
+      \        <td>follow_id</td>
+
+      \        <td>Integer</td>
+
+      \        <td>Primary Key, Auto Increment</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>user_1</td>
+
+      \        <td>Integer</td>
+
+      \        <td>Foreign Key (user.user_id), Not Null</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>user_2</td>
+
+      \        <td>Integer</td>
+
+      \        <td>Foreign Key (user.user_id), Not Null</td>
+
+      \      </tr>  \ 
+
+      \    </tbody>
+
+      \    </table>
+
+      \   \ 
+
+
+      \    <h3>User Error Codes </h3>\ 
+
+      \    <table>
+
+      \      <thead>
+
+      \        <th>Resource</th>
+
+      \        <th>Error Code</th>
+
+      \        <th>Message</th>
+
+      \      </thead>
+
+      \      <tbody>
+
+      \      <tr>
+
+      \        <td>User</td>
+
+      \        <td>USER001</td>
+
+      \        <td>User Id is required</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>User</td>
+
+      \        <td>USER002</td>
+
+      \        <td>Username is required</td>
+
+      \      </tr>
+
+      \     \ 
+
+      \      <tr>
+
+      \        <td>User</td>
+
+      \        <td>USER003</td>
+
+      \        <td>Password required</td>
+
+      \      </tr>
+
+      \      <tr>
+
+      \        <td>User</td>
+
+      \        <td>USER004</td>
+
+      \        <td>Email is required</td>
+
+      \      </tr>
+
+      \     \ 
+
+      \      <tr>
+
+      \        <td>User</td>
+
+      \        <td>USER005</td>
+
+      \        <td>First Name is required</td>
+
+      \      </tr>
+
+      \     \ 
+
+      \    </table>
+
+      \    <h3>Post Error Codes </h3>\ 
+
+      \    <table>
+
+      \      <thead>
+
+      \        <th>Resource</th>
+
+      \        <th>Error Code</th>
+
+      \        <th>Message</th>
+
+      \      </thead>
+
+      \      <tbody>
+
+      \     \ 
+
+      \      <tr>
+
+      \        <td>Post</td>
+
+      \        <td>POST001</td>
+
+      \        <td>Post Name is required</td>
+
+      \      </tr>
+
+      \     \ 
+
+      \      <tr>
+
+      \        <td>Post</td>
+
+      \        <td>POST002</td>
+
+      \        <td>Post description is required</td>
+
+      \      </tr>
+
+      \    </table>
+
+      \   \ 
+
+      \    <h3>Comment Error Codes </h3>\ 
+
+      \    <table>
+
+      \      <thead>
+
+      \        <th>Resource</th>
+
+      \        <th>Error Code</th>
+
+      \        <th>Message</th>
+
+      \      </thead>
+
+      \      <tbody>
+
+      \     \ 
+
+      \      <tr>
+
+      \        <td>Comment</td>
+
+      \        <td>COMMENT001</td>
+
+      \        <td>Comment is required</td>
+
+      \    </table>
+
+
+      \  version: 1.0.0
+
+      servers:
+
+      \  - url: http://127.0.0.1:8080
+
+      tags:
+
+      \  - name: \"User\"
+
+      \    description: \"User CRUD operations\"
+
+      \  - name: \"Posts\"
+
+      \    description: \"Blogs CRUD operations\"
+
+      \ \ 
+
+      paths:
+
+      \  /api/profile/{user_name}:
+
+      \  \ 
+
+      \    description: End point to display profile of self.
+
+      \    get:
+
+      \      tags:
+
+      \        - \"User\"
+
+      \      summary: \"Find user by ID\"
+
+      \      description: Operation to display user resource.
+
+      \      parameters:
+
+      \        - in: path
+
+      \          name: user_name
+
+      \          required: true
+
+      \          schema:
+
+      \            type: string
+
+      \            example: default_name
+
+      \      responses:
+
+      \        '200':
+
+      \          description: Request Successful
+
+      \          content:
+
+      \            application/json:
+
+      \              schema:
+
+      \                title: self_user object
+
+      \                type: object
+
+
+      \                properties:
+
+      \                  user_name:
+
+      \                    type: string
+
+      \                    example: user_name
+
+      \                  password:
+
+      \                    type: string
+
+      \                    example: secret_key
+
+      \                  email:
+
+      \                    type: string
+
+      \                    example: default_user@abcmail.com
+
+      \                  first_name:
+
+      \                    type: string
+
+      \                    example: firstname
+
+      \                  last_name:
+
+      \                    type: string
+
+      \                    example: lastname
+
+      \                  profile+pic:
+
+      \                    type: string
+
+      \                    example: /static/filename
+
+      \                 \ 
+
+      \                 \ 
+
+      \                   \ 
+
+      \                 \ 
+
+      \        '500':
+
+      \          description: Internal Server Error
+
+      \        '404':
+
+      \          description: User not found
+
+      \    put:
+
+      \      tags:
+
+      \        - \"User\"
+
+      \      summary: \"Update user credentials\"
+
+      \      description: Operation to create the course resource
+
+      \      parameters:
+
+      \        - in: path
+
+      \          name: user_name
+
+      \          required: true
+
+      \          schema:
+
+      \            type: string
+
+      \            example: default_name
+
+      \      requestBody:
+
+      \        content:
+
+      \          application/json:
+
+      \            schema:
+
+      \              type: object
+
+      \              properties:
+
+      \                profile_pic:
+
+      \                  type: string
+
+      \                  example: /static/file_name
+
+      \      responses:
+
+      \        '200':
+
+      \          description: Successfully Updated
+
+      \          content:
+
+      \            application/json:
+
+      \              schema:
+
+      \                type: object
+
+      \                properties:
+
+      \                  user_id:
+
+      \                    type: integer
+
+      \                    example: 201
+
+      \                  user_name:
+
+      \                    type: string
+
+      \                    example: default_user
+
+      \                  profile_pic:
+
+      \                    type: string
+
+      \                    example: /static/location
+
+      \        '500':
+
+      \          description: Internal Server Error
+
+      \        '400':
+
+      \          description: Bad request
+
+      \          content:
+
+      \            application/json:
+
+      \              schema:
+
+      \                type: object
+
+      \                properties:
+
+      \                  error_code:
+
+      \                    type: string
+
+      \                  error_message:
+
+      \                    type: string
+
+      \    delete:
+
+      \      tags:
+
+      \        - \"User\"
+
+      \      summary: \"Delete user\"
+
+      \      description: Operation to delete the user resource
+
+      \      parameters:
+
+      \        - in: path
+
+      \          name: user_name
+
+      \          required: true
+
+      \          schema:
+
+      \            type: string
+
+      \            example: default_name
+
+      \      responses:
+
+      \        '200':
+
+      \          description: Successfully deleted
+
+      \        \ 
+
+      \        '404':
+
+      \          description: User does not exist
+
+      \        '500':
+
+      \          description: Internal Server Error
+
+
+      \ \ 
+
+      \  /api/profile:
+
+      \    description: End point to display profile of others.
+
+      \    post:
+
+      \      tags:
+
+      \        - \"User\"
+
+      \      summary: \"Add user credentials\"
+
+      \      description: Operation to create the course resource
+
+      \     \ 
+
+      \      requestBody:
+
+      \        content:
+
+      \          application/json:
+
+      \            schema:
+
+      \              type: object
+
+      \              properties:
+
+      \                user_id:
+
+      \                  type: integer
+
+      \                  example: 101
+
+      \                user_name:
+
+      \                  type: string
+
+      \                  example: example_name
+
+      \                password:
+
+      \                  type: string
+
+      \                  example: \"1234\"
+
+      \                email:
+
+      \                  type: string
+
+      \                  example: abc@xyz.com
+
+      \                first_name:
+
+      \                  type: string
+
+      \                  example: Sudharshan
+
+      \                last_name:
+
+      \                  type: string
+
+      \                  example: Iyengar
+
+      \                profile_pic:
+
+      \                  type: string
+
+      \                  example: file_name
+
+      \                following:
+
+      \                  type: integer
+
+      \                  example: 0
+
+      \                followers:
+
+      \                  type: integer
+
+      \                  example: 0
+
+      \      responses:
+
+      \        '200':
+
+      \          description: Successfully Updated
+
+      \          content:
+
+      \            application/json:
+
+      \              schema:
+
+      \                type: object
+
+      \                properties:
+
+      \                  user_id:
+
+      \                    type: integer
+
+      \                    example: 201
+
+      \                  user_name:
+
+      \                    type: string
+
+      \                    example: default_user
+
+      \                  profile_pic:
+
+      \                    type: string
+
+      \                    example: /static/location
+
+      \        '500':
+
+      \          description: Internal Server Error
+
+      \        '400':
+
+      \          description: Bad request
+
+      \          content:
+
+      \            application/json:
+
+      \              schema:
+
+      \                type: object
+
+      \                properties:
+
+      \                  error_code:
+
+      \                    type: string
+
+      \                  error_message:
+
+      \                    type: string
+
+      \ \ 
+
+      \ \ 
+
+      \  /api/post/{user_name}:
+
+      \    description: End point to display profile of self.
+
+      \    get:
+
+      \      tags:
+
+      \        - \"Posts\"
+
+      \      summary: \"Find posts by username\"
+
+      \      description: Operation to display user resource.
+
+      \      parameters:
+
+      \        - in: path
+
+      \          name: user_name
+
+      \          required: true
+
+      \          schema:
+
+      \            type: string
+
+      \            example: default_name
+
+      \      responses:
+
+      \        '200':
+
+      \          description: Request Successful
+
+      \          content:
+
+      \            application/json:
+
+      \              schema:
+
+      \                type: array
+
+      \                items:
+
+      \                  properties:
+
+      \                   \ 
+
+      \                    post_id:
+
+      \                      type: integer
+
+      \                      example: 201
+
+      \                   \ 
+
+      \        '500':
+
+      \          description: Internal Server Error
+
+      \        '404':
+
+      \          description: User not found
+
+      \    post:
+
+      \      tags:
+
+      \        - \"Posts\"
+
+      \      summary: \"Adds post by username\"
+
+      \      description: Operation to create the post resource
+
+      \      parameters:
+
+      \        - in: path
+
+      \          name: user_name
+
+      \          required: true
+
+      \          schema:
+
+      \            type: string
+
+      \            example: default_name
+
+      \      requestBody:
+
+      \        content:
+
+      \          application/json:
+
+      \            schema:
+
+      \              type: object
+
+      \              properties:
+
+      \                post_name:
+
+      \                  type: string
+
+      \                  example: example_name
+
+      \                caption:
+
+      \                  type: string
+
+      \                  example: About Post
+
+      \                image:
+
+      \                  type: string
+
+      \                  example: /static/location_of_image
+
+      \      responses:
+
+      \        '201':
+
+      \          description: Successfully Created
+
+      \          content:
+
+      \            application/json:
+
+      \              schema:
+
+      \                title: student object
+
+      \                type: object
+
+      \                properties:
+
+      \                  user_name:
+
+      \                    type: string
+
+      \                    example: default_name
+
+      \                  post_id:
+
+      \                    type: integer
+
+      \                    example: 201
+
+      \        '409':
+
+      \          description: Student already exist
+
+      \        '500':
+
+      \          description: Internal Server Error
+
+      \        '400':
+
+      \          description: Bad request
+
+      \          content:
+
+      \            application/json:
+
+      \              schema:
+
+      \                type: object
+
+      \                properties:
+
+      \                  error_code:
+
+      \                    type: string
+
+      \                  error_message:
+
+      \                    type: string
+
+      \                   \ 
+
+      \  /api/{user_name}/post/{post_id}:
+
+      \    description: End point to edit posts.
+
+      \    put:
+
+      \      tags:
+
+      \        - \"Posts\"
+
+      \      summary: \"Edit posts by their ID\"
+
+      \      description: Operation to edit the posts resource
+
+      \      parameters:
+
+      \        - in: path
+
+      \          name: user_name
+
+      \          required: true
+
+      \          schema:
+
+      \            type: string
+
+      \            example: default_name
+
+      \        - in: path
+
+      \          name: post_id
+
+      \          required: true
+
+      \          schema:
+
+      \            type: integer
+
+      \            example: 201
+
+      \      requestBody:
+
+      \        content:
+
+      \          application/json:
+
+      \            schema:
+
+      \              type: object
+
+      \              properties:
+
+      \               \ 
+
+      \                post_name:
+
+      \                  type: string
+
+      \                  example: post_new_name
+
+      \                post_caption:
+
+      \                  type: string
+
+      \                  example: post_new_caption
+
+      \                post_image:
+
+      \                  type: string
+
+      \                  example: new_file_name
+
+      \               \ 
+
+      \      responses:
+
+      \        '200':
+
+      \          description: Successfully Updated
+
+      \          content:
+
+      \            application/json:
+
+      \              schema:
+
+      \                type: object
+
+      \                properties:
+
+      \                  post_id:
+
+      \                    type: integer
+
+      \                    example: 201
+
+      \                  post_name:
+
+      \                    type: string
+
+      \                    example: post_name
+
+      \                  post_image:
+
+      \                    type: string
+
+      \                    example: filename
+
+      \        '500':
+
+      \          description: Internal Server Error
+
+      \        '400':
+
+      \          description: Bad request
+
+      \          content:
+
+      \            application/json:
+
+      \              schema:
+
+      \                type: object
+
+      \                properties:
+
+      \                  error_code:
+
+      \                    type: string
+
+      \                  error_message:
+
+      \                    type: string
+
+      \    delete:
+
+      \      tags:
+
+      \        - \"Posts\"
+
+      \      summary: \"Delete Posts by ID\"
+
+      \      description: Operation to delete the course resource
+
+      \      parameters:
+
+      \        - in: path
+
+      \          name: user_name
+
+      \          required: true
+
+      \      \ 
+
+      \          schema:
+
+      \            type: string
+
+      \            example: default_name
+
+      \        - in: path
+
+      \          name: post_id
+
+      \          required: true
+
+      \          schema:
+
+      \            type: integer
+
+      \            example: 201
+
+      \      responses:
+
+      \        '200':
+
+      \          description: Successfully Deleted
+
+      \        '500':
+
+      \          description: Internal Server Error
+
+      \        '404':
+
+      \          description: Student not found
+
+      \   \ 
+
+      \\ 
+
+      \  "
+    contentType: yaml
+    _type: api_spec
+  - _id: uts_e66fc80b91ff4532a641e987aff5fc4e
+    parentId: wrk_688c9aff49ce4e44a885ffc5e5ba6c96
+    modified: 1662097547235
+    created: 1662097547235
+    name: Example Test Suite
+    _type: unit_test_suite
+  - _id: env_env_933be08f15cb61097e1e1bba00bfe8cc2c526e71_sub
+    parentId: env_933be08f15cb61097e1e1bba00bfe8cc2c526e71
+    modified: 1662298278941
+    created: 1662298278941
+    name: OpenAPI env
+    data:
+      scheme: http
+      base_path: ""
+      host: 127.0.0.1:8000
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1662298278941
+    _type: environment
